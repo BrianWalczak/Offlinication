@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Offlinication</title>
+
+		<style> //CSS
+			.title {
+				font-family: verdana;
+			}
+		</style>
+
+  </head>
+  <body>
+		<center> <h1 class="title">Offlinication Template</h1> </center>
+  </body>
+	<script> //Javascript ["Offline Activator" via Service Worker]
+		if("serviceWorker" in navigator){
+			navigator.serviceWorker.register("service-worker.js").then(function(registration){
+				}).catch(function(error){
+					alert("Service worker failed to be registered with error: ",error);
+					});
+					}
+		</script>
+</html>
